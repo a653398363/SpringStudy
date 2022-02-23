@@ -13,17 +13,18 @@ public class UserController {
 
     //这里使用@RequestMapping注解表示该方法对应的二级上下文路径
     @RequestMapping(value = "/getUserByGet", method = RequestMethod.GET)
-    String getUserByGet(@RequestParam(value = "userName") String userName){
+    String getUserByGet(@RequestParam(value = "userName") String userName) {
         return "Hello " + userName;
     }
 
 
     //这里使用@RequestMapping注解表示该方法对应的二级上下文路径
     @RequestMapping(value = "/getUserByGet2", method = RequestMethod.GET)
-    String getUserByGet2(@RequestParam(value = "userName") String userName){
+    String getUserByGet2(@RequestParam(value = "userName") String userName) {
         return "Hello " + userName;
     }
 
+    //post请求
     @RequestMapping(value = "/getJson", method = RequestMethod.POST)
     String getJson(@RequestParam(value = "name") String name) {
         return "name  getJson" + name;
